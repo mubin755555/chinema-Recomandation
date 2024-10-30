@@ -48,6 +48,28 @@ This dataset serves as the basis for building content-based or hybrid recommenda
 - **Scikit-learn**: Machine learning and similarity measures.
 - **Jupyter Notebook**: Development platform.
 
+  ## Step 2: Load the Dataset
+  movies = pd.read_csv('tmdb_5000_movies.csv')
+movies.head()
+## Step 3: Data Cleaning
+movies.dropna(subset=['genres', 'overview'], inplace=True)
+## Step 4: Feature Engineering
+# Example code for extracting genres
+movies['genres'] = movies['genres'].apply(lambda x: ' '.join([genre['name'] for genre in eval(x)]))
+## Step 5: Model Implementation
+
+from sklearn.feature_extraction.text import CountVectorizer
+count = CountVectorizer(stop_words='english')
+count_matrix = count.fit_transform(movies['genres'])
+
+cosine_sim = cosine_similarity(count_matrix, count_matrix)
+def get_recommendations(title, cosine_sim=cosine_sim):
+    # Example function code here
+
+## Step 6: Testing the Recommendation System
+
+get_recommendations('The Godfather')
+
 ## Usage
 1. Clone this repository:
    ```bash
