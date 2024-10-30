@@ -76,6 +76,6 @@ get_recommendations('The Godfather')
    git clone https://github.com/mubin755555/cinema-recommendation.git
 ## Acknowledgements
 
-- [@username](https://github.com/SabrinaAkter1)
+- [SabrinaAkter1](https://github.com/SabrinaAkter1)
 
    
