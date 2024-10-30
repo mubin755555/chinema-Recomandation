@@ -74,3 +74,8 @@ get_recommendations('The Godfather')
 1. Clone this repository:
    ```bash
    git clone https://github.com/mubin755555/cinema-recommendation.git
+## Acknowledgements
+
+- [@username](https://github.com/)
+
+   
